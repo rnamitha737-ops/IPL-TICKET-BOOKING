@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header id="home">
+
+    <h1>IPL TICKET BOOKING</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#matches">Match Schedule</a>
+        <a href="booking.html">Book Ticket</a>
+        <a href="#mybookings">My Bookings</a>
+        <a href="#guidelines">Guidelines</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <!-- Home Banner -->
+    <section id="home-banner">
+
+        <h1>Experience The Stadium Energy Live!</h1>
+
+        <p>GET YOUR TICKETS NOW AND BE PART OF THE THRILLING IPL ACTION!</p>
+
+        <p>Don't miss the action.</p>
+
+        <a href="#matches">View Schedule</a>
+        <a href="booking.html">Book Ticket</a>
+
+    </section>
+
+    <!-- About IPL -->
+    <section id="about">
+
+        <h2>About IPL 2026</h2>
+
+        <h3>Popular IPL Teams</h3>
+
+        <ul>
+            <li>Royal Challengers Bengaluru (RCB)</li>
+            <li>Chennai Super Kings (CSK)</li>
+            <li>Mumbai Indians (MI)</li>
+            <li>Kolkata Knight Riders (KKR)</li>
+            <li>Sunrisers Hyderabad (SRH)</li>
+            <li>Rajasthan Royals (RR)</li>
+        </ul>
+
+        <h3>My Favourite IPL Teams</h3>
+
+        <ol>
+            <li>Royal Challengers Bengaluru</li>
+            <li>Rajasthan Royals</li>
+            <li>Mumbai Indians</li>
+        </ol>
+
+        <h3>Major Match Venues</h3>
+
+        <ul>
+            <li>M. Chinnaswamy Stadium, Bengaluru</li>
+            <li>Wankhede Stadium, Mumbai</li>
+            <li>MA Chidambaram Stadium, Chennai</li>
+            <li>Eden Gardens, Kolkata</li>
+            <li>Narendra Modi Stadium, Ahmedabad</li>
+        </ul>
+
+    </section>
+
+    <!-- Match Schedule -->
+    <section id="matches">
+
+        <h2>IPL Match Schedule</h2>
+
+        <label for="team-filter">Filter by Team:</label>
+
+        <select id="team-filter">
+            <option value="all">All Teams</option>
+            <option value="RCB">Royal Challengers Bengaluru</option>
+            <option value="CSK">Chennai Super Kings</option>
+            <option value="MI">Mumbai Indians</option>
+            <option value="KKR">Kolkata Knight Riders</option>
+        </select>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Match Number</th>
+                    <th>Teams</th>
+                    <th>Date & Time</th>
+                    <th>Venue</th>
+                    <th>General</th>
+                    <th>Premium</th>
+                    <th>VIP</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>RCB vs CSK</td>
+                    <td>Sample Date, 7:30 PM</td>
+                    <td>Bengaluru</td>
+                    <td>₹1,500</td>
+                    <td>₹3,000</td>
+                    <td>₹5,000</td>
+                    <td><a href="#booking">Book</a></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>MI vs KKR</td>
+                    <td>Sample Date, 7:30 PM</td>
+                    <td>Mumbai</td>
+                    <td>₹2,000</td>
+                    <td>₹3,500</td>
+                    <td>₹6,000</td>
+                    <td><a href="#booking">Book</a></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+
+        <h2>Book Your Tickets</h2>
+
+        <form action="#" method="get">
+
+            <label for="match">Select Match:</label>
+
+            <select id="match" name="match" required>
+                <option value="" selected disabled>-- Select Match --</option>
+                <option value="RCB vs CSK">RCB vs CSK</option>
+                <option value="MI vs KKR">MI vs KKR</option>
+            </select>
+
+            <br><br>
+
+            <label for="stand">Select Stand:</label>
+
+            <select id="stand" name="stand" required>
+                <option value="" selected disabled>-- Select Stand --</option>
+                <option value="General">General</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <br><br>
+
+            <label for="quantity">Number of Tickets:</label>
+
+            <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="10"
+                required
+            >
+
+            <br><br>
+
+            <label for="name">Full Name:</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                minlength="3"
+                maxlength="50"
+                required
+            >
+
+            <br><br>
+
+            <label for="email">Email:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit phone number"
+                pattern="[0-9]{10}"
+                title="Please enter exactly 10 digits"
+                required
+            >
+
+            <br><br>
+
+            <button type="submit">Confirm Booking</button>
+
+            <button type="reset">Reset Form</button>
+
+        </form>
+
+        <aside>
+
+            <h3>Booking Summary</h3>
+
+            <p>Selected Match: RCB vs CSK</p>
+            <p>Stand Category: VIP</p>
+            <p>Ticket Price: ₹5,000</p>
+            <p>Number of Tickets: 2</p>
+
+            <h3>Total Amount: ₹10,000</h3>
+
+        </aside>
+
+    </section>
+
+    <!-- My Bookings -->
+    <section id="mybookings">
+
+        <h2>My Ticket Bookings</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Match</th>
+                    <th>Stand</th>
+                    <th>Tickets</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Booking records will appear here later -->
+            </tbody>
+
+        </table>
+
+        <p>No bookings available yet.</p>
+
+    </section>
+
+    <!-- Guidelines -->
+    <section id="guidelines">
+
+        <h2>Ticket Guidelines</h2>
+
+        <div>
+
+            <article>
+                <h3>Ticket Verification</h3>
+                <p>Carry your valid ticket and show the QR code at the stadium entrance.</p>
+            </article>
+
+            <article>
+                <h3>ID Proof Requirement</h3>
+                <p>Carry a valid government-issued photo ID for verification.</p>
+            </article>
+
+            <article>
+                <h3>Prohibited Items</h3>
+                <p>Do not carry outside food, sharp objects, or prohibited items into the stadium.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>© 2026 IPL Ticket Booking. All Rights Reserved.</p>
+    <p>Experience The Stadium Energy Live!</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
