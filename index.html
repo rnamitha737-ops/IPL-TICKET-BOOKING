@@ -1,8 +1,8 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,42 +13,30 @@
 <body>
 
 <header id="home">
-
     <h1>IPL TICKET BOOKING</h1>
-
     <nav>
         <a href="#home">Home</a>
         <a href="#matches">Match Schedule</a>
-        <a href="booking.html">Book Ticket</a>
+        <a href="#booking">Book Ticket</a>
         <a href="#mybookings">My Bookings</a>
         <a href="#guidelines">Guidelines</a>
     </nav>
-
 </header>
 
 <main>
 
-    <!-- Home Banner -->
     <section id="home-banner">
-
         <h1>Experience The Stadium Energy Live!</h1>
-
         <p>GET YOUR TICKETS NOW AND BE PART OF THE THRILLING IPL ACTION!</p>
-
         <p>Don't miss the action.</p>
-
         <a href="#matches">View Schedule</a>
-        <a href="booking.html">Book Ticket</a>
-
+        <a href="#booking">Book Ticket</a>
     </section>
 
-    <!-- About IPL -->
     <section id="about">
-
         <h2>About IPL 2026</h2>
 
         <h3>Popular IPL Teams</h3>
-
         <ul>
             <li>Royal Challengers Bengaluru (RCB)</li>
             <li>Chennai Super Kings (CSK)</li>
@@ -59,7 +47,6 @@
         </ul>
 
         <h3>My Favourite IPL Teams</h3>
-
         <ol>
             <li>Royal Challengers Bengaluru</li>
             <li>Rajasthan Royals</li>
@@ -67,7 +54,6 @@
         </ol>
 
         <h3>Major Match Venues</h3>
-
         <ul>
             <li>M. Chinnaswamy Stadium, Bengaluru</li>
             <li>Wankhede Stadium, Mumbai</li>
@@ -75,16 +61,12 @@
             <li>Eden Gardens, Kolkata</li>
             <li>Narendra Modi Stadium, Ahmedabad</li>
         </ul>
-
     </section>
 
-    <!-- Match Schedule -->
     <section id="matches">
-
         <h2>IPL Match Schedule</h2>
 
         <label for="team-filter">Filter by Team:</label>
-
         <select id="team-filter">
             <option value="all">All Teams</option>
             <option value="RCB">Royal Challengers Bengaluru</option>
@@ -94,12 +76,11 @@
         </select>
 
         <table>
-
             <thead>
                 <tr>
                     <th>Match Number</th>
                     <th>Teams</th>
-                    <th>Date & Time</th>
+                    <th>Date &amp; Time</th>
                     <th>Venue</th>
                     <th>General</th>
                     <th>Premium</th>
@@ -107,9 +88,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-
             <tbody>
-
                 <tr>
                     <td>1</td>
                     <td>RCB vs CSK</td>
@@ -120,7 +99,6 @@
                     <td>₹5,000</td>
                     <td><a href="#booking">Book</a></td>
                 </tr>
-
                 <tr>
                     <td>2</td>
                     <td>MI vs KKR</td>
@@ -131,122 +109,125 @@
                     <td>₹6,000</td>
                     <td><a href="#booking">Book</a></td>
                 </tr>
-
             </tbody>
-
         </table>
-
     </section>
 
-    <!-- Booking Form -->
+    <!-- ACTIVITY 7: SELECTOR FORMS AND LIVE INTERACTION -->
     <section id="booking">
-
         <h2>Book Your Tickets</h2>
 
-        <form action="#" method="get">
+        <div class="booking-container">
 
-            <label for="match">Select Match:</label>
+            <form id="booking-form">
 
-            <select id="match" name="match" required>
-                <option value="" selected disabled>-- Select Match --</option>
-                <option value="RCB vs CSK">RCB vs CSK</option>
-                <option value="MI vs KKR">MI vs KKR</option>
-            </select>
+                <label for="match">Select Match:</label>
+                <select id="match" name="match" required>
+                    <option value="">-- Select Match --</option>
+                    <option value="RCB vs CSK">RCB vs CSK</option>
+                    <option value="MI vs KKR">MI vs KKR</option>
+                </select>
 
-            <br><br>
+                <br><br>
 
-            <label for="stand">Select Stand:</label>
+                <label for="stand">Select Stand:</label>
+                <select id="stand" name="stand" required>
+                    <option value="">-- Select Stand --</option>
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                </select>
 
-            <select id="stand" name="stand" required>
-                <option value="" selected disabled>-- Select Stand --</option>
-                <option value="General">General</option>
-                <option value="Premium">Premium</option>
-                <option value="VIP">VIP</option>
-            </select>
+                <br><br>
 
-            <br><br>
+                <label for="quantity">Number of Tickets:</label>
+                <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    max="10"
+                    value="1"
+                    required
+                >
 
-            <label for="quantity">Number of Tickets:</label>
+                <br><br>
 
-            <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="1"
-                max="10"
-                required
-            >
+                <label for="name">Full Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    maxlength="50"
+                    required
+                >
 
-            <br><br>
+                <br><br>
 
-            <label for="name">Full Name:</label>
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your full name"
-                minlength="3"
-                maxlength="50"
-                required
-            >
+                <br><br>
 
-            <br><br>
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter 10-digit phone number"
+                    pattern="[0-9]{10}"
+                    title="Please enter exactly 10 digits"
+                    required
+                >
 
-            <label for="email">Email:</label>
+                <br><br>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-            >
+                <button type="submit">Confirm Booking</button>
+                <button type="reset">Reset Form</button>
 
-            <br><br>
+            </form>
 
-            <label for="phone">Phone Number:</label>
+            <!-- LIVE BOOKING SUMMARY CARD -->
+            <aside class="booking-summary">
+                <h3>Booking Summary</h3>
 
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter 10-digit phone number"
-                pattern="[0-9]{10}"
-                title="Please enter exactly 10 digits"
-                required
-            >
+                <p>Selected Match:
+                    <strong id="summary-match">Not selected</strong>
+                </p>
 
-            <br><br>
+                <p>Stand Category:
+                    <strong id="summary-stand">Not selected</strong>
+                </p>
 
-            <button type="submit">Confirm Booking</button>
+                <p>Ticket Price:
+                    <strong id="summary-price">₹0</strong>
+                </p>
 
-            <button type="reset">Reset Form</button>
+                <p>Number of Tickets:
+                    <strong id="summary-quantity">1</strong>
+                </p>
 
-        </form>
+                <hr>
 
-        <aside>
+                <h3>Total Amount:
+                    <span id="summary-total">₹0</span>
+                </h3>
+            </aside>
 
-            <h3>Booking Summary</h3>
-
-            <p>Selected Match: RCB vs CSK</p>
-            <p>Stand Category: VIP</p>
-            <p>Ticket Price: ₹5,000</p>
-            <p>Number of Tickets: 2</p>
-
-            <h3>Total Amount: ₹10,000</h3>
-
-        </aside>
-
+        </div>
     </section>
 
-    <!-- My Bookings -->
     <section id="mybookings">
-
         <h2>My Ticket Bookings</h2>
-
         <table>
-
             <thead>
                 <tr>
                     <th>Booking ID</th>
@@ -257,53 +238,42 @@
                     <th>Status</th>
                 </tr>
             </thead>
-
-            <tbody>
-                <!-- Booking records will appear here later -->
+            <tbody id="bookings-list">
+                <!-- Booking records can be added here later -->
             </tbody>
-
         </table>
-
-        <p>No bookings available yet.</p>
-
+        <p id="no-bookings">No bookings available yet.</p>
     </section>
 
-    <!-- Guidelines -->
     <section id="guidelines">
-
         <h2>Ticket Guidelines</h2>
 
-        <div>
+        <article>
+            <h3>Ticket Verification</h3>
+            <p>Carry your valid ticket and show the QR code at the stadium entrance.</p>
+        </article>
 
-            <article>
-                <h3>Ticket Verification</h3>
-                <p>Carry your valid ticket and show the QR code at the stadium entrance.</p>
-            </article>
+        <article>
+            <h3>ID Proof Requirement</h3>
+            <p>Carry a valid government-issued photo ID for verification.</p>
+        </article>
 
-            <article>
-                <h3>ID Proof Requirement</h3>
-                <p>Carry a valid government-issued photo ID for verification.</p>
-            </article>
-
-            <article>
-                <h3>Prohibited Items</h3>
-                <p>Do not carry outside food, sharp objects, or prohibited items into the stadium.</p>
-            </article>
-
-        </div>
-
+        <article>
+            <h3>Prohibited Items</h3>
+            <p>Do not carry outside food, sharp objects, or prohibited items into the stadium.</p>
+        </article>
     </section>
 
 </main>
 
 <footer>
-
     <p>© 2026 IPL Ticket Booking. All Rights Reserved.</p>
     <p>Experience The Stadium Energy Live!</p>
-
 </footer>
 
-<script src="app.js"></script>
+<!-- Toast notification -->
+<div id="toast" role="status" aria-live="polite"></div>
 
+<script src="app.js"></script>
 </body>
 </html>
